@@ -1,0 +1,32 @@
+form{
+	border:2px solid black;
+}
+.coding{
+	position: absolute;
+	width: 60%;
+}
+#ffoo
+{
+padding-right: 250px;
+text-align: right;
+}
+
+.textwidth
+{
+	width: 800px;
+	margin: 10px;
+	height: 80px
+}
+.divright
+{
+	text-align: right;
+	padding-right: 350px;
+}
+.bluebut{
+
+	background-color: blue;
+}
+div
+{
+	padding:5px;
+}

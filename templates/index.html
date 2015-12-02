@@ -1,0 +1,95 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+
+<body>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {%set getmsg = message.split(":")%}            
+            
+            <p>{{message}}</p>
+        {% endfor %}
+   
+    {% endif %}
+{% endwith %}
+        <table>
+            <tr><td>
+        <form action="/users" method="post">
+        <table>
+
+        	<tr>
+        		<td>Email:</td>
+        		<td>
+     
+                    <input type="textbox" id="email" name="email"
+
+
+                     value="{{session['email']}}"
+                     >
+                </td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+        		<td>    
+        			<input type="textbox" id="first_name" name="first_name" value='{{session["first_name"]}}'>
+        		</td>
+        	</tr>
+            <tr>
+        		<td>Last Name</td>
+        		<td>
+                    <input type="textbox" id="last_name" name="last_name" value='{{session["last_name"]}}'>
+                </td>
+            </tr>
+            <tr>
+                <td>password</td>
+        		<td>
+                    <input type="password" id="password" name="password" value='{{session["password"]}}'>
+                </td>
+        	</tr>
+        	<tr>
+                <td>confirm password</td>
+        		<td>
+                    <input type="password" id="confirm_password" name="confirm_password"  value='{{session["confirm_password"]}}'>
+                </td>
+        	</tr>
+
+            <tr>
+                <td>
+                    <input type="submit" id="idsubmit" value="submit">
+                </td>
+            </tr>
+        	
+        </table>
+           </form>
+        </td>
+        <td>
+            <form action="/login" method="post">
+            Login
+            <table>
+            <tr>
+                <td>Username</td>
+                <td>    
+                    <input type="textbox" id="loginuser" name="loginuser">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" id="password" name="loginpassword">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" id="idsubmit" value="submit">
+                </td>
+            </tr>
+            </table>
+        </form>
+        </td>
+    </tr>
+</table>
+ 
+</body>
+</html>

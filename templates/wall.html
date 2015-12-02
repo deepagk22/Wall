@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+</head>
+<body>
+	<h3>Coding Dojo</h3>
+	<div class="coding"></div>
+	<div id="ffoo">Welcome {{session["first_name"]}}&nbsp;{{session["last_name"]}}&nbsp;
+			<a href="/logout"> Logout</a>
+
+	</div>
+<hr>
+		<form  action="/postmsgcall" method="post">
+<div>Post a message</div>
+
+<textarea name="msg"  class="textwidth">
+	</textarea>
+	<div class="divright">
+
+			<input type="submit" class="bluebut" value="Post a message">
+
+	</div>
+</form>
+	<div>
+{{sessionmessage}}
+	</div>
+</body>
+</html>
